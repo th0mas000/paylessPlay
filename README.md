@@ -6,6 +6,14 @@
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
 
+<div align="center">
+
+## 🚀 [**Live Demo - Try it Now!**](https://paylessplay.web.app/)
+
+**[https://paylessplay.web.app/](https://paylessplay.web.app/)**
+
+</div>
+
 ---
 
 ## ✨ Features
