@@ -102,10 +102,7 @@ paylessPlay/
 │       └── app_theme.dart       # Theme configuration
 ├── test/                         # Test files
 ├── web/                          # Web-specific files
-├── firebase.json                 # Firebase configuration
-├── firestore.rules              # Firestore security rules
-├── storage.rules                # Firebase Storage security rules
-└── pubspec.yaml                 # Dependencies
+
 ```
 
 ---
