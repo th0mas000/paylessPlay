@@ -8,7 +8,7 @@
 
 <div align="center">
 
-## 🚀 [**Live Demo - Try it Now!**](https://paylessplay.web.app/)
+## [**Live Demo - Try it Now!**](https://paylessplay.web.app/)
 
 **[https://paylessplay.web.app/](https://paylessplay.web.app/)**
 
