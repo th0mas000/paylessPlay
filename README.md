@@ -39,6 +39,40 @@
 
 ---
 
+## 📸 Screenshots
+
+### 🖥️ Web Version
+
+<div align="center">
+
+#### Main View
+![Web - Main View](screenshot/paylessPlay_sc.jpeg)
+
+#### Game Details
+![Web - Card Popup](screenshot/paylessPlay_sc_card_popup.jpeg)
+
+#### Filters
+![Web - Filter](screenshot/paylessPlay_sc_filter.jpeg)
+
+</div>
+
+### 📱 Mobile Version
+
+<div align="center">
+
+#### Main View
+![Mobile - Main View](screenshot/paylessPlay_scm.jpeg)
+
+#### Game Details
+![Mobile - Card Popup](screenshot/paylessPlay_scm_card_popup.jpeg)
+
+#### Filters
+![Mobile - Filter](screenshot/paylessPlay_scm_filter.jpeg)
+
+</div>
+
+---
+
 ### Prerequisites
 
 Before you begin, ensure you have the following installed:

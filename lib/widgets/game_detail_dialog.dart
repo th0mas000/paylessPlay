@@ -402,32 +402,79 @@ class _GameDetailDialogState extends State<GameDetailDialog> with SingleTickerPr
                         displayPrice = '\$${deal.salePrice}';
                      }
 
-                    return ListTile(
-                      leading: store.images.icon.isNotEmpty 
-                        ? Image.network(store.images.fullIcon, width: 32, height: 32, errorBuilder: (_,__,___) => const Icon(Icons.store))
-                        : const Icon(Icons.store),
-                      title: Text(store.storeName, style: const TextStyle(fontWeight: FontWeight.bold)),
-                      trailing: SizedBox(
-                        width: 140, // Fixed width for alignment
-                        child: Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                                Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment: CrossAxisAlignment.end,
-                                    children: [
-                                        Text(displayPrice, style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFFFF6C37), fontSize: 16)),
-                                        if (normalPrice != null)
-                                            Text(normalPrice, style: TextStyle(decoration: TextDecoration.lineThrough, color: Colors.grey[600], fontSize: 12)),
-                                    ],
-                                ),
+                    return Card(
+                      margin: EdgeInsets.zero,
+                      elevation: 0,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            // Store name row
+                            Row(
+                              children: [
+                                if (store.images.icon.isNotEmpty)
+                                  Image.network(
+                                    store.images.fullIcon, 
+                                    width: 24, 
+                                    height: 24, 
+                                    errorBuilder: (_,__,___) => const Icon(Icons.store, size: 24)
+                                  )
+                                else
+                                  const Icon(Icons.store, size: 24),
                                 const SizedBox(width: 8),
-                                IconButton(
-                                    icon: const Icon(Icons.open_in_new),
-                                    onPressed: () => _launchDealUrl(deal.dealID),
-                                    tooltip: 'Go to Store',
-                                )
-                            ],
+                                Expanded(
+                                  child: Text(
+                                    store.storeName, 
+                                    style: const TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14,
+                                    ),
+                                    maxLines: 1,
+                                    overflow: TextOverflow.fade,
+                                    softWrap: false,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 8),
+                            // Price and button row
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      displayPrice, 
+                                      style: const TextStyle(
+                                        fontWeight: FontWeight.bold, 
+                                        color: Color(0xFFFF6C37), 
+                                        fontSize: 18
+                                      )
+                                    ),
+                                    if (normalPrice != null)
+                                      Text(
+                                        normalPrice, 
+                                        style: TextStyle(
+                                          decoration: TextDecoration.lineThrough, 
+                                          color: Colors.grey[600], 
+                                          fontSize: 12
+                                        )
+                                      ),
+                                  ],
+                                ),
+                                FilledButton.tonalIcon(
+                                  onPressed: () => _launchDealUrl(deal.dealID),
+                                  // icon: const Icon(Icons.open_in_new, size: 16),
+                                  label: const Text('Go to Store'),
+                                  style: FilledButton.styleFrom(
+                                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
                       ),
                     );
