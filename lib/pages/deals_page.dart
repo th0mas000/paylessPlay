@@ -98,7 +98,7 @@ class _DealsPageState extends State<DealsPage> {
       }
       
       final deals = await _apiService.getDeals(
-        pageSize: 60,
+        pageSize: 30,
         sortBy: _sortBy,
         storeID: _selectedStoreIds.isEmpty ? null : _selectedStoreIds.join(','),
         onSale: _onSale,
@@ -140,7 +140,7 @@ class _DealsPageState extends State<DealsPage> {
     try {
       final nextPage = _currentPage + 1;
       final deals = await _apiService.getDeals(
-        pageSize: 60,
+        pageSize: 30,
         sortBy: _sortBy,
         storeID: _selectedStoreIds.isEmpty ? null : _selectedStoreIds.join(','),
         onSale: _onSale,
@@ -183,7 +183,7 @@ class _DealsPageState extends State<DealsPage> {
           _currentPage = nextPage;
           _isLoadMoreRunning = false;
 
-          if (deals.length < 60) _hasNextPage = false;
+          if (deals.length < 30) _hasNextPage = false;
         });
       }
     } catch (e) {
@@ -227,7 +227,7 @@ class _DealsPageState extends State<DealsPage> {
     final dealsWithSteamId = deals.where((d) => d.steamAppID.isNotEmpty && d.steamAppID != '0').toList();
     
 
-    final limitedDeals = dealsWithSteamId.take(60).toList();
+    final limitedDeals = dealsWithSteamId.take(30).toList();
     
     for (final deal in limitedDeals) {
 
