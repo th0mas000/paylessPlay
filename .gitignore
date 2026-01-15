@@ -52,3 +52,4 @@ firestore.rules
 firestore.indexes.json
 storage.rules
 deploy.ps1
+.github/workflows/firebase-hosting-*.yml
