@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../models/deal.dart';
 import '../models/store.dart';
 import '../services/cheapshark_service.dart';
@@ -7,6 +8,7 @@ import '../widgets/deal_card.dart';
 import '../widgets/filter_sheet.dart';
 import '../services/location_service.dart';
 import '../services/steam_service.dart';
+import '../theme/theme_provider.dart';
 
 class DealsPage extends StatefulWidget {
   const DealsPage({super.key});
@@ -324,12 +326,20 @@ class _DealsPageState extends State<DealsPage> {
             ? TextField(
                 controller: _searchController,
                 autofocus: true,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   hintText: 'Search games...',
                   border: InputBorder.none,
-                  hintStyle: TextStyle(color: Colors.white70),
+                  hintStyle: TextStyle(
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? Colors.white70
+                        : Colors.black54,
+                  ),
                 ),
-                style: const TextStyle(color: Colors.white),
+                style: TextStyle(
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? Colors.white
+                      : Colors.black87,
+                ),
                 textInputAction: TextInputAction.search,
                 onSubmitted: _onSearchSubmitted,
               )
@@ -414,6 +424,18 @@ class _DealsPageState extends State<DealsPage> {
                   const PopupMenuItem(value: 'Price', child: Text('Lowest Price')),
                   const PopupMenuItem(value: 'Title', child: Text('Title')),
               ],
+            ),
+          if (!_isSearching)
+            IconButton(
+              icon: Icon(
+                Theme.of(context).brightness == Brightness.dark
+                    ? Icons.light_mode
+                    : Icons.dark_mode,
+              ),
+              onPressed: () {
+                context.read<ThemeProvider>().toggleTheme();
+              },
+              tooltip: 'Toggle theme',
             ),
           if (!_isSearching)
             IconButton(
