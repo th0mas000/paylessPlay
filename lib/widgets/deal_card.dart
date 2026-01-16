@@ -189,10 +189,15 @@ class _DealCardState extends State<DealCard> with SingleTickerProviderStateMixin
                         child: Container(
                           decoration: BoxDecoration(
                             gradient: LinearGradient(
-                              colors: [
-                                AppTheme.cardColor,
-                                AppTheme.surfaceLightColor.withOpacity(0.8),
-                              ],
+                              colors: Theme.of(context).brightness == Brightness.dark
+                                  ? [
+                                      AppTheme.cardColor,
+                                      AppTheme.surfaceLightColor.withOpacity(0.8),
+                                    ]
+                                  : [
+                                      AppTheme.lightCardColor,
+                                      AppTheme.lightBackgroundColor.withOpacity(0.6),
+                                    ],
                               begin: Alignment.topLeft,
                               end: Alignment.bottomRight,
                             ),
