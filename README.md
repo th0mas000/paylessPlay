@@ -42,6 +42,7 @@
 
 ### 🎨 User Experience
 - **Dark Theme**: Beautiful, eye-friendly dark interface
+- **Light Theme**: Beautiful, eye-friendly light interface
 - **Responsive Design**: Optimized for web browsers
 - **Location-Aware**: Automatic region detection for accurate pricing
 
