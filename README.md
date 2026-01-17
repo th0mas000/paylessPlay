@@ -55,13 +55,13 @@
 <div align="center">
 
 #### Main View
-![Web - Main View](screenshot/paylessPlay_sc.jpeg)
+<img src="screenshot/paylessPlay_sc.jpeg" alt="Web - Main View" width="600"/>
 
 #### Game Details
-![Web - Card Popup](screenshot/paylessPlay_sc_card_popup.jpeg)
+<img src="screenshot/paylessPlay_sc_card_popup.jpeg" alt="Web - Card Popup" width="600"/>
 
 #### Filters
-![Web - Filter](screenshot/paylessPlay_sc_filter.jpeg)
+<img src="screenshot/paylessPlay_sc_filter.jpeg" alt="Web - Filter" width="600"/>
 
 </div>
 
@@ -70,13 +70,13 @@
 <div align="center">
 
 #### Main View
-![Mobile - Main View](screenshot/paylessPlay_scm.jpeg)
+<img src="screenshot/paylessPlay_scm.jpeg" alt="Mobile - Main View" width="300"/>
 
 #### Game Details
-![Mobile - Card Popup](screenshot/paylessPlay_scm_card_popup.jpeg)
+<img src="screenshot/paylessPlay_scm_card_popup.jpeg" alt="Mobile - Card Popup" width="300"/>
 
 #### Filters
-![Mobile - Filter](screenshot/paylessPlay_scm_filter.jpeg)
+<img src="screenshot/paylessPlay_scm_filter.jpeg" alt="Mobile - Filter" width="300"/>
 
 </div>
 
